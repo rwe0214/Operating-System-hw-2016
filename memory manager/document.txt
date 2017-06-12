@@ -1,0 +1,23 @@
+Policy:
+1.FIFO
+	適合主要 page分布在比較後面執行的process
+
+	pros:
+		比較簡單了解，程式碼也比較好撰寫
+	cons:
+		一般來說page fault rate會比LRU來的高
+		
+2.LRU
+	適合一般的process，選擇最近最沒使用的page來page out
+
+	pros:
+		page fault rate較低
+	cons:
+		程式碼撰寫較麻煩，需要另外新建一個統計近期使用的table
+3.Random
+	完全碰運氣的一個policy
+
+	pros:
+		簡單了解，程式碼好撰寫
+	cons:
+		page fault rate會比LRU來的高	
